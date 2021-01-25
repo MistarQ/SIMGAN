@@ -1,6 +1,6 @@
 from options.config import get_arguments
 from utils.manipulate import *
-from models.TuiGAN import *
+from models.SIMGAN import *
 import utils.functions as functions
 
 
@@ -33,4 +33,4 @@ if __name__ == '__main__':
     realA, realB, realC = functions.read_three_domains(opt)
     functions.adjust_scales2image(realA, opt)
     train(opt, Gs, Zs, reals, NoiseAmp, Gs2, Zs2, reals2, NoiseAmp2, Gs3, Zs3, reals3, NoiseAmp3)
-    TuiGAN_generate(Gs, Zs, reals, NoiseAmp, Gs2, Zs2, reals2, NoiseAmp2, Gs3, Zs3, reals3, NoiseAmp3, opt)
+    SIMGAN_generate(Gs, Zs, reals, NoiseAmp, Gs2, Zs2, reals2, NoiseAmp2, Gs3, Zs3, reals3, NoiseAmp3, opt)
