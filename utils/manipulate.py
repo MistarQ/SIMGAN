@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 from models.TuiGAN import *
 from options.config import get_arguments
 
-def TuiGAN_generate(Gs,Zs,reals,NoiseAmp, Gs2,Zs2,reals2,NoiseAmp2,Gs3, Zs3, reals3, NoiseAmp3,  opt,in_s=None,gen_start_scale=0):
+def SIMGAN_generate(Gs,Zs,reals,NoiseAmp, Gs2,Zs2,reals2,NoiseAmp2,Gs3, Zs3, reals3, NoiseAmp3,  opt,in_s=None,gen_start_scale=0):
     if in_s is None:
         in_s = torch.full(reals[0].shape, 0, device=opt.device)
     x_ab = in_s
